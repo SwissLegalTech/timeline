@@ -1,0 +1,15 @@
+.avatar {
+    background-size: cover;
+}
+
+.avatar_m {
+    background-image: url('/assets/avatar_m.png');
+}
+
+.avatar_f {
+    background-image: url('/assets/avatar_f.png');
+}
+
+mat-card-subtitle {
+    cursor: pointer;
+}

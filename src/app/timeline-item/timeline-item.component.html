@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="avatar" [style.background-image]="'url(/assets/' + item.avatar + ')'"></div>
+    <mat-card-title>{{item.author}} - {{item.info}}</mat-card-title>
+    <mat-card-subtitle>{{item.created | date:'dd.MM.yyyy HH:mm'}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-subtitle (click)="showDocument()">{{item.name}}</mat-card-subtitle>
+  <mat-card-content>
+    <mat-chip-list>
+      <mat-chip *ngFor="let keyword of item.keywords let i = index" [attr.data-index]="i" (click)="openTagDialog(keyword)">
+        <span *ngIf="keyword.tag !== null && keyword.tag !== ''">{{keyword.tag}}: </span>{{keyword.name}}
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>

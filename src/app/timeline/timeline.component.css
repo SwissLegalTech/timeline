@@ -1,0 +1,14 @@
+app-timeline-item {
+    width: 400px;
+    display: block;
+    position: relative;
+    left: 50%;
+}
+
+app-timeline-item:nth-child(even) {
+    margin-left: -430px;
+}
+
+app-timeline-item:nth-child(odd) {
+    margin-right: 430px;
+}
