@@ -8,9 +8,14 @@
 
 <div class="container" *ngIf="!timeline">
   <mat-card>
-    <mat-card-content>
+    <div class="text-center">
+      <img src="/assets/Logo_casetravel.png" width="200px">
+    </div>
+    <br><br>
+    <mat-card-content class="text-center">
       <input class="ng-hide" id="input-file-id" multiple type="file" (change)="handleFileInput($event.target.files)">
-      <button mat-button (click)="upload($event.target.files)">Upload</button>
+      <br><br>
+      <button mat-button (click)="upload($event.target.files)" class="btn btn-block btn-primary">Upload</button>
     </mat-card-content>
   </mat-card>
 </div>
@@ -18,6 +23,8 @@
 <div class="container" *ngIf="timeline">
   <div class="timeline">
     <app-timeline></app-timeline>
+
+    <div class="line"></div>
   </div>
   <div class="preview">
     <app-preview></app-preview>

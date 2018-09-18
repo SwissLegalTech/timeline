@@ -2,4 +2,12 @@
 
 @import '~normalize.css/normalize.css';
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+
+app-timeline-item:nth-child(even) .line-item {
+    left: 409px;
+}
+
+app-timeline-item:nth-child(odd) .line-item {
+    left: -21px;
+}

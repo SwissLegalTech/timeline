@@ -10,7 +10,7 @@
       </mat-expansion-panel-header>
 
       <ul>
-        <li *ngFor="let keyword of item.keywords let i = index" [attr.data-index]="i">
+        <li *ngFor="let keyword of item.keywords let i = index" [attr.data-index]="i" style="cursor: pointer;" (click)="hightlightTag(keyword)">
           {{keyword.type}} - {{keyword.name}} <span *ngIf="keyword.tag !== null && keyword.tag !== ''"> ({{keyword.tag}})</span>
         </li>
       </ul>

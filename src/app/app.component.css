@@ -1,10 +1,11 @@
-mat-toolbar {  
+mat-toolbar {
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
 .timeline {
     width: 70%;
     display: block;
+    position: relative;
 }
 
 .preview {
@@ -16,4 +17,15 @@ mat-toolbar {
     right: 0;
     overflow-y: auto;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.line {
+    border-radius: 3px;
+    width: 3px;
+    background: #dfdfdf;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -15px;
 }

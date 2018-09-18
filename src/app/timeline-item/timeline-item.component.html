@@ -9,9 +9,10 @@
   <mat-card-subtitle>{{item.info}}</mat-card-subtitle>
   <mat-card-content>
     <mat-chip-list>
-      <mat-chip *ngFor="let keyword of item.keywords let i = index" [attr.data-index]="i" (click)="openTagDialog(keyword)">
-        {{keyword.type}} - {{keyword.name}} <span *ngIf="keyword.tag !== null && keyword.tag !== ''">&nbsp;({{keyword.tag}})</span>
+      <mat-chip *ngFor="let keyword of item.keywords let i = index" [attr.data-index]="i" [ngClass]="(keyword.active === true) ? 'active' : ''"
+        (click)="openTagDialog(keyword)"> {{keyword.type}} - {{keyword.name}} <span *ngIf="keyword.tag !== null && keyword.tag !== ''">&nbsp;({{keyword.tag}})</span>
       </mat-chip>
     </mat-chip-list>
   </mat-card-content>
+  <div class="line-item"></div>
 </mat-card>

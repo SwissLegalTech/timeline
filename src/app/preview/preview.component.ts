@@ -30,4 +30,17 @@ export class PreviewComponent implements OnInit {
     )
   }
 
+  public hightlightTag(keyword: any) {
+    for (let i = 0; i < this.timeline.length; i++) {
+      for (let j = 0; j < this.timeline[i].keywords.length; j++) {
+        if (this.timeline[i].keywords[j].name === keyword.name) {
+          this.timeline[i].keywords[j].active = true;
+        }
+        else {
+          this.timeline[i].keywords[j].active = false;
+        }
+      }
+    }
+  }
+
 }
