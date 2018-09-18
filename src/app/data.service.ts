@@ -5,9 +5,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from './message.service';
 import { TIMELINEITEM } from './mock-timeline';
+import { NgxXml2jsonService } from 'ngx-xml2json';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  //headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
 @Injectable({
@@ -15,17 +16,21 @@ const httpOptions = {
 })
 export class DataService {
 
-  private nerUrl = 'localhost/nlp-tagger-php/get-keywords.php';
+  private nerUrl = 'http://localhost/timeline/src/assets/nlp-tagger-php/index.php';
 
   private timelineItemSource = new BehaviorSubject<TimelineItem>(JSON.parse(localStorage.getItem('currentItem')));
   public currentTimelineItemSource = this.timelineItemSource.asObservable();
 
-  private timelineSource = new BehaviorSubject<TimelineItem[]>(JSON.parse(localStorage.getItem('currentTimeline')));
+  private timelineSource = new BehaviorSubject<TimelineItem[]>(null);
   public currentTimelineSource = this.timelineSource.asObservable();
+
+  private loadingSource = new BehaviorSubject<boolean>(false);
+  public currentLoadingStatus = this.loadingSource.asObservable();
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private ngxXml2jsonService: NgxXml2jsonService
   ) { }
 
   public changeTimelineItem(timelineItem: TimelineItem): void {
@@ -34,38 +39,35 @@ export class DataService {
   }
 
   public changeTimeline(timeline: TimelineItem[]): void {
-    localStorage.setItem('currentTimeline', JSON.stringify(timeline));
     this.timelineSource.next(timeline);
   }
 
-  public getTimelineItems(): TimelineItem[] {
-    return TIMELINEITEM;
-    // return this.http.get<TimelineItem[]>(this.heroesUrl)
-    //   .pipe(
-    //     tap(heroes => this.log('fetched timeline posts')),
-    //     catchError(this.handleError('getTimelineItems', []))
-    //   );
+  public changeLoadingStatus(loading: boolean): void {
+    this.loadingSource.next(loading);
   }
 
-  public getKeywords() {
-    return [
-      {
-        name: 'Haus',
-        tag: null
-      },
-      {
-        name: 'Test',
-        tag: null
-      }
-    ];
-    // return this.http.get<TimelineItem[]>('') // URL zu Localhost PHP Script
-    //   .pipe(
-    //     tap(heroes => this.log('fetched heroes')),
-    //     catchError(this.handleError('getHeroes', []))
-    //   );
+  public getTimelineItems(url: string): Observable<TimelineItem[]> {
+     return this.http.get<TimelineItem[]>(url)
+       .pipe(
+         tap(data => this.log('fetched data posts')),
+         catchError(this.handleError('getTimelineItems', []))
+       );
   }
-
-  public
+  
+  public parseXml(xmlStr) {
+    let parser = new DOMParser();
+    let xml = parser.parseFromString(xmlStr, 'text/xml');
+    let json = this.ngxXml2jsonService.xmlToJson(xml);
+    return json;
+  }
+  
+  
+  public getKeywords(text): Observable<string> {
+    let data = {
+      text: text
+    };
+    return this.http.post(this.nerUrl, data, { responseType: 'text' });
+  }
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

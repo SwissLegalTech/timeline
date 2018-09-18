@@ -1,11 +1,21 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
   {{ title }}
 </mat-toolbar>
 
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
 <div style="height:15px;"></div>
 
-<div class="container">
+<div class="container" *ngIf="!timeline">
+  <mat-card>
+    <mat-card-content>
+      <input class="ng-hide" id="input-file-id" multiple type="file" (change)="handleFileInput($event.target.files)">
+      <button mat-button (click)="upload($event.target.files)">Upload</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="container" *ngIf="timeline">
   <div class="timeline">
     <app-timeline></app-timeline>
   </div>
