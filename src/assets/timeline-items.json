@@ -1,8 +1,8 @@
 [
     {
         "id": 11,
-        "name": "Markenregistrierungsurkunde",
-        "content": "Lorem isum dolor sit amet, cponsetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+        "name": "Trademark Certificate",
+        "content": "PETCO Nice Classes 5, 7, 20, 35, 39 Max Mustermann Dr. Silke Graf 01/03/2013 Filing Number: 011171253 07/09/2012",
         "info": "Dokument hinzugefügt",
         "author": "Lisa",
         "avatar": "avatar_f.png",
@@ -13,8 +13,8 @@
     {
         "id": 12,
         "name": "OPPOSITION NO B 2 106 980",
-        "content": "Lorem isum dolor sit amet, cponsetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.       Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpatUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
-        "info": "Dokument hinzugefügt",
+        "content": "Max Mustermann",
+        "info": "14/01/2018 Domingo Gutiérrez Ariza EUIPO Filing Number: 011171253 Max Mustermann",
         "author": "Hans",
         "avatar": "avatar_m.png",
         "keywords": null,
@@ -24,7 +24,7 @@
     {
         "id": 13,
         "name": "Klageschrift",
-        "content": "Lorem Clemens Henökl Ipsum Lorem Ipsum Lorem isum dolor sit amet, cponsetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+        "content": "15/06/2018 Max Mustermann Klara Luzia Wien London Handelsgericht Wien EUR 42.700.--",
         "info": "Dokument hinzugefügt",
         "author": "Dr. Silke Graf",
         "avatar": "avatar_f.png",
@@ -35,8 +35,19 @@
     {
         "id": 14,
         "name": "Klagebeantwortung",
-        "content": "Lorem Ipsum Lorem isum dolor sit amet, cponsetetur sadipscing elitr, sed diam nonumy eirmod tempor",
+        "content": "30/06/2018 Max Mustermann Klara Luzia Wien London Handelsgericht Wien EUR 42.700.-- EUR 5.000.--",
         "info": "Dokument hinzugefügt",
+        "author": "Lisa",
+        "avatar": "avatar_f.png",
+        "keywords": null,
+        "created": "2018-01-01 12:00:00",
+        "modified": "2018-01-01 12:00:00"
+    },
+  {
+        "id": 15,
+        "name": "Protokollverhandlung",
+        "content": "30/09/2018 Max Mustermann Klara Luzia Wien London Handelsgericht Wien EUR 42.700.-- EUR 5.000.--",
+        "info": "Event erstellt",
         "author": "Lisa",
         "avatar": "avatar_f.png",
         "keywords": null,
