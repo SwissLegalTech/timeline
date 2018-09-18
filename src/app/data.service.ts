@@ -52,21 +52,13 @@ export class DataService {
          tap(data => this.log('fetched data posts')),
          catchError(this.handleError('getTimelineItems', []))
        );
-  }
+  }  
   
-  public parseXml(xmlStr) {
-    let parser = new DOMParser();
-    let xml = parser.parseFromString(xmlStr, 'text/xml');
-    let json = this.ngxXml2jsonService.xmlToJson(xml);
-    return json;
-  }
-  
-  
-  public getKeywords(text): Observable<string> {
+  public getKeywords(text): Observable<any> {
     let data = {
       text: text
     };
-    return this.http.post(this.nerUrl, data, { responseType: 'text' });
+    return this.http.post(this.nerUrl, data);
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatCardModule, MatGridListModule, MatChipsModule, MatDialogModule, MatButtonModule, MatInputModule, MatProgressBarModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule, MatGridListModule, MatChipsModule, MatDialogModule, MatButtonModule, MatInputModule, MatProgressBarModule, MatExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -33,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     MatProgressBarModule,
+    MatExpansionModule,
     HttpClientModule
   ],
   providers: [],

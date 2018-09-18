@@ -1,17 +1,26 @@
 <div class="container">
   <div class="summary">
     <h3>Case Summary</h3>
-    <ul *ngFor="let item of timeline let i = index" [attr.data-index]="i">
-      <li>{{item.name}}</li>
+
+    <mat-expansion-panel *ngFor="let item of timeline let i = index" [attr.data-index]="i">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{item.name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
       <ul>
         <li *ngFor="let keyword of item.keywords let i = index" [attr.data-index]="i">
-            <span *ngIf="keyword.tag !== null && keyword.tag !== ''">{{keyword.tag}}: </span>{{keyword.name}}
+          {{keyword.type}} - {{keyword.name}} <span *ngIf="keyword.tag !== null && keyword.tag !== ''"> ({{keyword.tag}})</span>
         </li>
       </ul>
-    </ul>
+    </mat-expansion-panel>
+    <div style="height:10px;"></div>
   </div>
-  <h3>{{item.name}}</h3>
-  <p>
-    {{item.content}}
-  </p>
+  <div *ngIf="item">
+    <h3>{{item.name}}</h3>
+    <p>
+      {{item.content}}
+    </p>
+  </div>
 </div>

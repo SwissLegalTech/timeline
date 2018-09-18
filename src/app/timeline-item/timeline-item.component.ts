@@ -19,7 +19,7 @@ export class TimelineItemComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.item);
+    console.log(this.item.keywords);
   }
 
   showDocument() {
@@ -32,7 +32,8 @@ export class TimelineItemComponent implements OnInit {
       disableClose: true,
       data: {
         name: keyword.name,
-        tag: keyword.tag
+        tag: keyword.tag,
+        type: keyword.type
       }
     });
 

@@ -24,23 +24,14 @@ export class TimelineComponent implements OnInit {
     //   .subscribe(timelineItems => this.items = timelineItems);
     this.dataService.currentTimelineSource.subscribe(data => {
       this.items = data;
-      // this.dataService.changeLoadingStatus(true);
-      // for (let i = 0; i < this.items.length; i++) {
+      this.dataService.changeLoadingStatus(true);
+      for (let i = 0; i < this.items.length; i++) {
 
-      //   this.dataService.getKeywords(this.items[i].content).subscribe(data => {
-      //     let result = this.dataService.parseXml(data);
-      //     let keywords: any = [];
-      //     for (let i = 0; i < result.result.wi.length; i++) {
-      //       keywords.push({
-      //         name: result.result.wi[i],
-      //         tag: null
-      //       });
-      //     }
-      //     console.log(result);
-      //     this.items[i].keywords = keywords;
-      //     this.dataService.changeLoadingStatus(false);
-      //   });
-      // }
+        this.dataService.getKeywords(this.items[i].content).subscribe(data => {
+          this.items[i].keywords = data;
+          this.dataService.changeLoadingStatus(false);
+        });
+      }
     });
   }
 

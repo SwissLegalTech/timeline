@@ -4,6 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 export interface Tag {
   name: string;
   tag: string;
+  type: string;
 }
 
 @Component({
