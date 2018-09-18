@@ -4,7 +4,6 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from './message.service';
-import { TIMELINEITEM } from './mock-timeline';
 import { NgxXml2jsonService } from 'ngx-xml2json';
 
 const httpOptions = {
