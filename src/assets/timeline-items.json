@@ -14,7 +14,7 @@
         "id": 12,
         "name": "OPPOSITION NO B 2 106 980",
         "content": "Max Mustermann",
-        "info": "14/01/2018 Domingo Gutiérrez Ariza EUIPO Filing Number: 011171253 Max Mustermann",
+        "info": "14/01/2018 Max Mustermann Domingo Gutiérrez Ariza EUIPO Filing Number: 011171253 Regulation (EC) No 207/2009 Regulation (EC) No 2868/95 Regulation (EU) 2017/1001 Delegated Regulation EU 2017/1430 Implementing Regulation (EU) 2017/1431 Article 76(1) EUTMR Article 8(1)(b) EUTMR",
         "author": "Hans",
         "avatar": "avatar_m.png",
         "keywords": null,
@@ -24,7 +24,7 @@
     {
         "id": 13,
         "name": "Klageschrift",
-        "content": "15/06/2018 Max Mustermann Klara Luzia Wien London Handelsgericht Wien EUR 42.700.--",
+        "content": "15/06/2018 Max Mustermann Klara Luzia Dr. Silke Graf Wien London Handelsgericht Wien EUR 42.700.-- 4 OB 5/18 d GZ 35C125/18g Regulation (EU) 2017/1001 Delegated Regulation EU 2017/1430 Implementing Regulation (EU) 2017/1431 Article 76(1) EUTMR Article 8(1)(b) EUTMR",
         "info": "Dokument hinzugefügt",
         "author": "Dr. Silke Graf",
         "avatar": "avatar_f.png",
@@ -35,7 +35,7 @@
     {
         "id": 14,
         "name": "Klagebeantwortung",
-        "content": "30/06/2018 Max Mustermann Klara Luzia Wien London Handelsgericht Wien EUR 42.700.-- EUR 5.000.--",
+        "content": "30/06/2018 Max Mustermann Klara Luzia Dr. Silke Graf Wien London Handelsgericht Wien EUR 42.700.-- EUR 5.000.-- GZ 35C125/18g Regulation (EU) 2017/1001 Delegated Regulation EU 2017/1430 Implementing Regulation (EU) 2017/1431 Article 76(1) EUTMR Article 8(1)(b) EUTMR",
         "info": "Dokument hinzugefügt",
         "author": "Lisa",
         "avatar": "avatar_f.png",
@@ -46,7 +46,7 @@
   {
         "id": 15,
         "name": "Protokollverhandlung",
-        "content": "30/09/2018 Max Mustermann Klara Luzia Wien London Handelsgericht Wien EUR 42.700.-- EUR 5.000.--",
+        "content": "30/09/2018 Max Mustermann Klara Luzia Wien London Handelsgericht Wien EUR 42.700.-- EUR 5.000.-- GZ 35C125/18g",
         "info": "Event erstellt",
         "author": "Lisa",
         "avatar": "avatar_f.png",
