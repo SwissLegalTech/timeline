@@ -1,6 +1,6 @@
 # Teamname: timeline
 Team lead: Dr. Silke Graf, slack: Silke Graf
-Team members: ,Clemens Henökl, Michel Burkhalter 
+Team members: Sara Gillipsie, Clemens Henökl, Michel Burkhalter, 
 SDK: angular5
 API: none
 assets used:
