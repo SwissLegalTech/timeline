@@ -28,15 +28,17 @@ Team Members:
 - Angular Material
 - Bootstrap 4
 - Normalize CSS
-- Stanford Named Entity Recognizer (NER) version 3.9.1 (https://nlp.stanford.edu/software/CRF-NER.shtml)
-- Stanford NLP Tagger (https://github.com/patrickschur/stanford-nlp-tagger)
+- Stanford Named Entity Recognizer (NER) version 3.9.1 (https://nlp.stanford.edu/software/CRF-NER.shtml) - JAVA
+- Stanford NLP Tagger (https://github.com/patrickschur/stanford-nlp-tagger) - PHP
 
 ### 6. Installation
 After installing the packages with npm install you need to run composer install in the src/assets/nlp-tagger-php directory.
-This will add the packages for patrickschur/stanford-nlp-tagger which is a wrapper written in PHP. You can use this to trigger the Stanford NER Library.
+This will add the packages for patrickschur/stanford-nlp-tagger which is a wrapper written in PHP. You can use this library to trigger the Stanford NER Library.
 
-The patrickschur/stanford-nlp-tagger won't add the Stanford NER Library automatically. You need to download the Library from https://nlp.stanford.edu/software/stanford-ner-2018-02-27.zip and copy it into the src/assets/nlp-tagger-php folder.
+The patrickschur/stanford-nlp-tagger won't add the Stanford NER Library automatically. You need to download it from https://nlp.stanford.edu/software/stanford-ner-2018-02-27.zip and copy it into the src/assets/nlp-tagger-php folder.
 Please also follow the instruction on https://github.com/patrickschur/stanford-nlp-tagger.
+
+Just to be clear the classifiers need to be placed in the \src\assets\nlp-tagger-php\stanford-ner\classifiers directory. For this app the 7 category classifier with the name english.muc.7class.distsim.crf.ser.gz has been used.
 
 Once all of this has been done, the app should work as expected by executing ng serve in the root directory.
 
