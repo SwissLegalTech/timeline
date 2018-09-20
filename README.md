@@ -17,7 +17,12 @@ Team Members:
 
 ### 3. The Advantages
 
-### 4. Technical Requirements
+### 4. Demo
+ The demo will only be provided in form of an image. To test the app please follow the installation guide in paragraph 6.
+ ![demo](https://github.com/SwissLegalTech/timeline/demo/demo.jpg )
+
+
+### 5. Technical Requirements
 - Angular 6
 - Angular Material
 - Bootstrap 4
@@ -25,6 +30,7 @@ Team Members:
 - Stanford Named Entity Recognizer (NER) version 3.9.1 (https://nlp.stanford.edu/software/CRF-NER.shtml)
 - Stanford NLP Tagger (https://github.com/patrickschur/stanford-nlp-tagger)
 
+### 6. Installation
 After installing the packages with npm install you need to run composer install in the src/assets/nlp-tagger-php directory.
 This will add the packages for patrickschur/stanford-nlp-tagger which is a wrapper written in PHP. You can use this to trigger the Stanford NER Library.
 
@@ -33,7 +39,7 @@ Please also follow the instruction on https://github.com/patrickschur/stanford-n
 
 Once all of this has been done, the app should work as expected by executing ng serve in the root directory.
 
-### 5. Workflow
+### 7. Workflow
 - run ng serve in the root directory
 - open the browser with http://localhost:4200
 - In the upload screen choose the file src/assets/timeline-items.json to test the app
