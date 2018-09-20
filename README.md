@@ -1,8 +1,19 @@
-# Teamname: timeline
-Team lead: Dr. Silke Graf, slack: Silke Graf
-Team members: Sara Gillipsie, Clemens Henökl, Michel Burkhalter, 
-SDK: angular5
-API: none
-assets used:
-libraris used:angular5, angularmaterial, bootstrap, Stanford NER v3.9.1
-components not created at SwissLegalTech2018:none
+# Case Traveller 
+## The e-Management-System: Inefficiency ends here.
+
+### Team
+Lead: 
+- Dr. Silke Graf, slack: Silke Graf (https://www.linkedin.com/in/silke-graf-110a71b3/)
+Team Members:
+- Sara Gillipsie
+- Clemens Henökl, MA MSc (https://www.linkedin.com/in/clemens-henökl-789843134/)
+- Michel Burkhalter
+
+### 1. The Problem
+
+### 2. The Solution
+
+### 3. The Advantages
+
+### 4. Technical Requirements
+
