@@ -20,7 +20,7 @@
 
 
 ### 5. Technical Requirements
-- NMP
+- NPM
 - Composer
 - Apache Server - to execute the PHP Files
 - Angular 6 (https://angular.io/)
