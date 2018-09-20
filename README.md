@@ -2,14 +2,10 @@
 ## Your timeline for smart navigation in legal cases
 
 ### Team
-Lead: 
-
-- Dr. Silke Graf, (https://www.linkedin.com/in/silke-graf-110a71b3/)
-
-Team Members:
-- Sara Gillipsie
-- Clemens Henökl, MA MSc (https://www.linkedin.com/in/clemens-henökl-789843134/)
-- Michel Burkhalter
+- (Lead) Dr. Silke Graf, (https://www.linkedin.com/in/silke-graf-110a71b3/)
+- (Conception) Sara Gillipsie
+- (Developer) Clemens Henökl, MA MSc (https://www.linkedin.com/in/clemens-henökl-789843134/)
+- (Conception) Michel Burkhalter
 
 ### 1. The Problem
 
@@ -24,23 +20,29 @@ Team Members:
 
 
 ### 5. Technical Requirements
-- Angular 6
-- Angular Material
-- Bootstrap 4
-- Normalize CSS
+- NMP
+- Composer
+- Apache Server - to execute the PHP Files
+- Angular 6 (https://angular.io/)
+- Angular Material (https://material.angular.io/)
+- Bootstrap 4 (http://getbootstrap.com/)
+- Normalize CSS (https://necolas.github.io/normalize.css/)
 - Stanford Named Entity Recognizer (NER) version 3.9.1 (https://nlp.stanford.edu/software/CRF-NER.shtml) - JAVA
 - Stanford NLP Tagger (https://github.com/patrickschur/stanford-nlp-tagger) - PHP
 
 ### 6. Installation
-After installing the packages with npm install you need to run composer install in the src/assets/nlp-tagger-php directory.
-This will add the packages for patrickschur/stanford-nlp-tagger which is a wrapper written in PHP. You can use this library to trigger the Stanford NER Library.
+After cloning the git repository to your local machine, you need to execute npm install in order to add all required packages to the project. We added the vendor packages for patrickschur/stanford-nlp-tagger and the Stanford NER version 3.9.1 from 2018-02-27 to the src/assets/nlp-tagger-php directory because of convenience reasons. Primarily you won't need any changes to the project to test the app as-is.
 
-The patrickschur/stanford-nlp-tagger won't add the Stanford NER Library automatically. You need to download it from https://nlp.stanford.edu/software/stanford-ner-2018-02-27.zip and copy it into the src/assets/nlp-tagger-php folder.
-Please also follow the instruction on https://github.com/patrickschur/stanford-nlp-tagger.
+In case you want to update the patrickschur/stanford-nlp-tagger package you need to run composer install in the src/assets/nlp-tagger-php directory. However, keep in mind that this will overwrite manual changes in the library especially you changed the classifier names in the $lookupTable.
 
-Just to be clear the classifiers need to be placed in the \src\assets\nlp-tagger-php\stanford-ner\classifiers directory. For this app the 7 category classifier with the name english.muc.7class.distsim.crf.ser.gz has been used.
+(IMPORTANT) The patrickschur/stanford-nlp-tagger library is written in PHP and has been chosen in order to easily provide access from the Angular frontend in form of HTTP API Calls to the Stanford NER Library which is written in JAVA. However, please keep in mind that you need to run the Angular app in a directory on your local machine which can execute PHP code. Therefor use a local apache environment like for example XAMPP and put the whole Project into the c:\xampp\htdocs\ directory.
 
-Once all of this has been done, the app should work as expected by executing ng serve in the root directory.
+In case you update the patrickschur/stanford-nlp-tagger it won't add the Stanford NER Library automatically. You need to download it from https://nlp.stanford.edu/software/stanford-ner-2018-02-27.zip and copy it into the src/assets/nlp-tagger-php folder.
+Please also follow the instruction on https://github.com/patrickschur/stanford-nlp-tagger. To review newer versions of the Stanford NER Library please look at this source https://nlp.stanford.edu/software/CRF-NER.shtml.
+
+Just to be clear the classifiers need to be placed in the \src\assets\nlp-tagger-php\stanford-ner\classifiers directory. For this app the English 7-category classifier with the name english.muc.7class.distsim.crf.ser.gz has been used and the $lookupTable in the File \src\assets\nlp-tagger-php\vendor\patrickschur\stanford-nlp-tagger\src\StanfordTagger\CRFClassifier.php has been modified to choose it. 
+
+In case you want to add a different language or your own model to extract different data categories you need to add the classifier (Model) to the \src\assets\nlp-tagger-php\stanford-ner\classifiers directory and update the $lookupTable in \src\assets\nlp-tagger-php\vendor\patrickschur\stanford-nlp-tagger\src\StanfordTagger\CRFClassifier.php.
 
 ### 7. Workflow
 - run ng serve in the root directory
