@@ -1,10 +1,10 @@
 # Case Traveller 
-## The e-Management-System: Inefficiency ends here.
+## Your timeline for smart navigation in legal cases
 
 ### Team
 Lead: 
 
-- Dr. Silke Graf, slack: Silke Graf (https://www.linkedin.com/in/silke-graf-110a71b3/)
+- Dr. Silke Graf, (https://www.linkedin.com/in/silke-graf-110a71b3/)
 
 Team Members:
 - Sara Gillipsie
@@ -22,13 +22,25 @@ Team Members:
 - Angular Material
 - Bootstrap 4
 - Normalize CSS
-- Stanford CoreNLP (https://stanfordnlp.github.io/CoreNLP)
+- Stanford Named Entity Recognizer (NER) version 3.9.1 (https://nlp.stanford.edu/software/CRF-NER.shtml)
 - Stanford NLP Tagger (https://github.com/patrickschur/stanford-nlp-tagger)
 
 After installing the packages with npm install you need to run composer install in the src/assets/nlp-tagger-php directory.
-This will add the packages for patrickschur/stanford-nlp-tagger which is a wrapper written in PHP. You can use this to trigger the Stanford CoreNLP Library.
+This will add the packages for patrickschur/stanford-nlp-tagger which is a wrapper written in PHP. You can use this to trigger the Stanford NER Library.
 
-The patrickschur/stanford-nlp-tagger won't add the Stanford CoreNLP Library automatically. You need to download the Core Library from https://nlp.stanford.edu/software/stanford-ner-2017-06-09.zip and copy it into the src/assets/nlp-tagger-php folder.
+The patrickschur/stanford-nlp-tagger won't add the Stanford NER Library automatically. You need to download the Library from https://nlp.stanford.edu/software/stanford-ner-2018-02-27.zip and copy it into the src/assets/nlp-tagger-php folder.
 Please also follow the instruction on https://github.com/patrickschur/stanford-nlp-tagger.
 
 Once all of this has been done, the app should work as expected by executing ng serve in the root directory.
+
+### 5. Workflow
+- run ng serve in the root directory
+- open the browser with http://localhost:4200
+- In the upload screen choose the file src/assets/timeline-items.json to test the app
+- After the button "upload" has been clicked, the app will load the timeline and immediately starts to analyze the texts related to an event with the Stanford NER Library.
+- The Stanford NER Library will extract data and tags them with categories such as PERSON, DATE, TIME, MONEY, LOCATION,... and delivers them in XML format. To use them with the Angular app, the XML structure will be transformed into JSON by using PHP.
+- Once the PHP script sends the JSON response to the Angular app, the extracted keywords will be displayed in the frontend.
+- Users will now be able to get an overview of the whole case only by viewing the keywords in the summary box.
+- Additionally, by clicking on a keyword chip, it is possible to add a custom tag to an entity (e.g.: A person can be tagged as a lawyer)
+- Finally, by clicking on a keyword in the summary box every equal keyword in the timeline will be highlighted to display the relation to the events.
+- This is it!
