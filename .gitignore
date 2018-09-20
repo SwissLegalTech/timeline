@@ -42,4 +42,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/src/assets/nlp-tagger-php/*
+# Stanford Lib und Vendor Packages ignorieren
+/src/assets/nlp-tagger-php/vendor/*
+/src/assets/nlp-tagger-php/stanford-ner/*

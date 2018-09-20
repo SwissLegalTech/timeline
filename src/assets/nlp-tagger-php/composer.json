@@ -1,0 +1,15 @@
+{
+    "name": "chenoekl/nlp-tagger-php",
+    "description": "Testprojekt mit PHP nlp Tagger auf Basis der Stanford nlp lib",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Clemens Henoekl",
+            "email": "chenoekl@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "patrickschur/stanford-nlp-tagger": "dev-master"
+    }
+}

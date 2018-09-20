@@ -4,7 +4,6 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessageService } from './message.service';
-import { NgxXml2jsonService } from 'ngx-xml2json';
 
 const httpOptions = {
   //headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -28,8 +27,7 @@ export class DataService {
 
   constructor(
     private http: HttpClient,
-    private messageService: MessageService,
-    private ngxXml2jsonService: NgxXml2jsonService
+    private messageService: MessageService
   ) { }
 
   public changeTimelineItem(timelineItem: TimelineItem): void {
