@@ -19,7 +19,8 @@ Team Members:
 
 ### 4. Demo
  The demo will only be provided in form of an image. To test the app please follow the installation guide in paragraph 6.
- ![demo](https://github.com/SwissLegalTech/timeline/demo/demo.jpg )
+ 
+ ![Loaded timeline with keyword tagging](https://github.com/SwissLegalTech/timeline/blob/master/demo/demo.jpg )
 
 
 ### 5. Technical Requirements
