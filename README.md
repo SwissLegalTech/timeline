@@ -15,7 +15,7 @@ Working on long-term cases usually means that you perform this task more than on
 For lawyers in law firms the time spent on the study of files is usually nonbillable. Judges, prosecutors, in-house lawyers and legal assistants may not bother about billable hours. Anyway, the more time you save on the study of files the more time you have to actually answer the legal questions of the case. Or to just have less working hours ;)
 
 ### 2. The Solution
-Case Traveller ist a smart Case Visualization Software that helps you getting you an overview of your case by automatically generating a timeline of the events in the case.
+Case Traveller is a smart Case Visualization Software that helps you getting you an overview of your case by automatically generating a timeline of the events in the case.
 
 How it works? You simply upload all the documents (Word, PDF, e mails, ...) of the case into the web tool and the software immediately creates a vertical timeline of all events, which may consist of one or several documents. Within seconds you can scroll through your case and see what happened and how much time passed between two events.
 
@@ -25,7 +25,7 @@ Clicking on one keyword in the Case Summary Box highlights this keyword in each 
 
 Also, you can tag keywords that are important to you. For instance, you can pick a name and tell the tool that this person is "the witness regarding the topic of evidence A)".
 
-The big advantes of the Case Traveller are pretty obvious:
+The big advantages of the Case Traveller are pretty obvious:
 - saves a lot of time
 - gives you an overview of the case you can in fact picture (not only a boring table)
 - can be updated with new information within seconds
@@ -34,7 +34,7 @@ The big advantes of the Case Traveller are pretty obvious:
 ### 3. The Possibilities
 Since the Case Traveller does one of the most basic tasks of the work on legal cases, the target group consists of to kind of lawyers, regardless of the industry and the field of specialization. Hence, the market of this product is huge.
 
-Apart from the business case, there are various ways the functionality of the tool can be expanded. We already a couple of features in mind that would further simplify the work on legal case ;)
+Apart from the business case, there are various ways the functionality of the tool can be expanded. We already have a couple of features in mind that would further simplify the work on legal case ;)
 
 ### 4. Demo
 The demo will only be provided in form of an image. To test the app please follow the installation guide in paragraph 7.
